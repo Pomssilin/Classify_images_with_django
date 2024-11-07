@@ -1,0 +1,29 @@
+{% load static %}
+<nav>
+  <div class="nav__header">
+    <div class="nav__logo">
+     {% comment %} <a href="#">
+        <img
+          src="{% static 'classify/assets/img_logo.png' %}"
+          alt="logo"
+          class="logo"
+        />
+      </a>  {% endcomment %}
+      <a href="#home_page">classify it</a>
+    </div>
+    <div class="nav__menu__btn" id="menu-btn">
+      <i class="bx bx-menu"></i>
+    </div>
+  </div>
+  <ul class="nav__links" id="nav-links">
+    <li><a href="#home_page">HOME</a></li>
+    <li><a href="#about_page">SERVICES</a></li>
+    <li><a href="#faq_page">FAQ</a></li>
+    <li><a href="#contact_page">CONTACT</a></li>
+  </ul>
+  
+  <div class="nav__btns">
+    <button class="btn log_btn">Log In</button>
+    <button class="btn sign_btn">Sign Up</button>
+  </div>
+</nav>

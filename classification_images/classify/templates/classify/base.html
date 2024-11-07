@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Classification{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'classify/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'classify/css/footer.css' %}" />
+    <link rel="stylesheet" href="{% static 'classify/css/navbar.css' %}" />
+    <link rel="stylesheet" href="{% static 'classify/css/home.css' %}" />
+    <link rel="stylesheet" href="{% static 'classify/css/result.css' %}" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+
+
+<body>
+    {% include "classify/partial/_navbar.html" %}
+    {% block content %}{% endblock %}
+    {% include "classify/partial/_footer.html" %}
+</body>
+
+
+<script src="{% static 'classify/js/jQuery.js' %}"></script>
+<script src="{% static 'classify/js/popper.js' %}"></script>
+<script src="{% static 'classify/js/bootstrap.js' %}"></script>
+<script src="{% static 'classify/js/script.js' %}"></script>
+
+</html>

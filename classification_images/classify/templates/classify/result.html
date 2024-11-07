@@ -1,0 +1,37 @@
+{% extends "classify/base.html" %}
+{% load static %}
+{% block content %}
+
+<section class="container mt-5 mb-5">
+  <div class="upload-container">
+    <h1>Upload an Image for Classification</h1>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <label for="file-upload" class="upload-btn">
+        <input
+          type="file"
+          id="file-upload"
+          name="image"
+          accept="image/*"
+          required
+        />
+        <span>Upload Image <i class='bx bx-cloud-upload text-white'></i></span>
+      </label>
+      <p>or drop a file here</p>
+      <p>CTRL + V to paste image or URL</p>
+      <button type="submit" class="classify-btn">Classify Image</button>
+    </form>
+  </div>
+
+  <div class="result-container">
+    {% if result and confidence %}
+  <h1>Classification Result</h1>
+  <img src="{{ uploaded_image_url }}" alt="Uploaded Image" style="max-width: 100%; height: auto; margin-bottom: 20px;" />
+  <p>{{ result }}</p>
+  <p>{{ confidence }}</p>
+{% endif %}
+
+  </div>
+</section>
+
+{% endblock content %}

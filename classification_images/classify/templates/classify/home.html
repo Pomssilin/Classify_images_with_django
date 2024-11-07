@@ -1,0 +1,288 @@
+{% extends "classify/base.html" %} {% load static %} {% block content %}
+<section class="">
+<div class="container"  id="home_page">
+  <div class="container__left">
+    <h1>Enjoy Effortless Image Classification</h1>
+    <div class="container__btn">
+      <a href="{% url 'result' %}" class="btn">Try Now!</a>
+    </div>
+  </div>
+  <div class="container__right">
+    <div class="images">
+      <img
+        src="{% static 'classify/assets/animale.png' %}"
+        alt="tent-1"
+        class="tent-1"
+      />
+      <img
+        src="{% static 'classify/assets/anm.png' %}"
+        alt="tent-2"
+        class="tent-2"
+      />
+    </div>
+    <div class="content">
+      <h4>+ 5000 users</h4>
+      <h2>Classify it</h2>
+      <h3>Transform Your Photos with Ease</h3>
+      <p>
+        Our image classification tool is designed for those who value simplicity
+        and efficiency. Enjoy quick and automatic sorting of your images,
+        allowing you to focus on creativity while we handle the organization.
+        Experience the joy of a streamlined image library without the hassle.
+      </p>
+    </div>
+  </div>
+</div>
+
+</section>
+
+{% comment %} description section {% endcomment %}
+
+<section class="description-section" id="about_page"  >
+  <div class="col-md-6 offset-md-3">
+    <div class="desc-title text-center pb-3">
+      <h2>Learn About Our Services</h2>
+    </div>
+  </div>
+  <div class="description-page">
+    <div class="desc-subtitle text-center">
+      <h1>The Best Image Classification Tool: See Everything in Detail</h1>
+    </div>
+    <div class="desc-container">
+      <div class="desc-content">
+        <div class="text-content">
+          <h3>
+            Image Classification 100% Automatically in 5 Seconds, No Clicks
+            Required
+          </h3>
+          <p>
+            Instantly classify your images with our cutting-edge application—no
+            clicks needed!
+          </p>
+          <p>
+            Focus on what truly matters. Let our tool handle classification
+            while you explore your creativity and passions effortlessly!
+          </p>
+        </div>
+        <div class="image-content">
+          <img
+            src="{% static 'classify/assets/fast.png' %}"
+            alt="Fast Background Removal"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% comment %} video sections {% endcomment %}
+
+<section class="video-section">
+  <div class="col-md-6 offset-md-3 mt-5">
+    <div class="faq-title text-center pb-3">
+      <h2>Overview of Our Services</h2>
+    </div>
+  </div>
+  <div class="our-service flex">
+    <div class="text-container">
+      <p class="title-video">
+        Discover our services through a quick video overview, showcasing how we
+        deliver efficiency and innovation to meet your needs. Watch to see how
+        we make a difference!
+      </p>
+      <div class="container__btn mt-5">
+        <a href="{% url 'result' %}" class="btn">START Now</a>
+      </div>
+    </div>
+    <div class="our-video text-center">
+      <video
+        class="styled-video object-fit-cover border rounded"
+        autoplay
+        controls
+      >
+        <source
+          src="{% static 'classify/assets/video.mp4' %}"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</section>
+
+{% comment %} Section FAQ {% endcomment %}
+
+<section class="faq-section mt-5" id="faq_page">
+  <div class="container-faq">
+    <div class="row">
+      <!-- FAQ Title -->
+      <div class="col-md-6 offset-md-3">
+        <div class="faq-title text-center pb-3">
+          <h2>Image Classification FAQ</h2>
+        </div>
+      </div>
+
+      <!-- FAQ Content -->
+      <div class="col-md-6 offset-md-3">
+        <div class="faq">
+          <!-- FAQ Item 1 -->
+          <div class="card">
+            <div class="card-header">
+              <div class="mb-0">
+                <h5 class="faq-title">
+                  <span class="badge">1</span>What is image classification?
+                </h5>
+                <div class="card-body">
+                  <p>
+                    Identifies objects or scenes in an image, like recognizing a
+                    car or animal.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="card">
+            <div class="card-header" id="faqHeading-2">
+              <div class="mb-0">
+                <h5
+                  class="faq-title"
+                  data-toggle="collapse"
+                  data-target="#faqCollapse-2"
+                  aria-expanded="false"
+                  aria-controls="faqCollapse-2"
+                >
+                  <span class="badge">2</span>How does it work?
+                </h5>
+                <div class="card-body">
+                  <p>
+                    Uses machine learning to analyze patterns and assign
+                    categories based on large datasets.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="card">
+            <div class="card-header" id="faqHeading-3">
+              <div class="mb-0">
+                <h5
+                  class="faq-title"
+                  data-toggle="collapse"
+                  data-target="#faqCollapse-3"
+                  aria-expanded="false"
+                  aria-controls="faqCollapse-3"
+                >
+                  <span class="badge">3</span>What objects can it classify?
+                </h5>
+                <div class="card-body">
+                  <p>
+                    Recognizes common items like cars, animals, and biks...
+                    Accuracy varies by object complexity.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="card">
+            <div class="card-header" id="faqHeading-4">
+              <div class="mb-0">
+                <h5
+                  class="faq-title"
+                  data-toggle="collapse"
+                  data-target="#faqCollapse-4"
+                  aria-expanded="false"
+                  aria-controls="faqCollapse-4"
+                >
+                  <span class="badge">4</span>How accurate is it?
+                </h5>
+                <div class="card-body">
+                  <p>
+                    Accuracy improves with high-quality images; blurry or
+                    low-resolution images may reduce precision.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="card">
+            <div class="card-header" id="faqHeading-5">
+              <div class="mb-0">
+                <h5
+                  class="faq-title"
+                  data-toggle="collapse"
+                  data-target="#faqCollapse-5"
+                  aria-expanded="false"
+                  aria-controls="faqCollapse-5"
+                >
+                  <span class="badge">5</span>Supported image formats?
+                </h5>
+                <div class="card-body">
+                  <p>
+                    Works with JPEG, PNG, BMP. Best results with clear,
+                    moderately sized images.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="card">
+            <div class="card-header" id="faqHeading-6">
+              <div class="mb-0">
+                <h5
+                  class="faq-title"
+                  data-toggle="collapse"
+                  data-target="#faqCollapse-6"
+                  aria-expanded="false"
+                  aria-controls="faqCollapse-6"
+                >
+                  <span class="badge">6</span>Is my image stored?
+                </h5>
+                <div class="card-body">
+                  <p>
+                    No, images are processed securely without storage or
+                    sharing.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 7 -->
+          <div class="card">
+            <div class="card-header" id="faqHeading-7">
+              <div class="mb-0">
+                <h5
+                  class="faq-title"
+                  data-toggle="collapse"
+                  data-target="#faqCollapse-7"
+                  aria-expanded="false"
+                  aria-controls="faqCollapse-7"
+                >
+                  <span class="badge">7</span>Tips for better accuracy?
+                </h5>
+                <div class="card-body">
+                  <p>
+                    Use clear, well-lit, focused images for the best
+                    classification results.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
